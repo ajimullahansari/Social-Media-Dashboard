@@ -1,3 +1,4 @@
+![Image](https://github.com/user-attachments/assets/c9464583-ab47-4b8b-8c2e-ca0dab84f4d8)
 # Social Media Dashboard
 
 ## Overview
