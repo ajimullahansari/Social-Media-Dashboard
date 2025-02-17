@@ -1,0 +1,232 @@
+/* Base Responsive Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 15px;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+.social-stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    gap: 15px;
+}
+
+.stat-card {
+    flex: 1;
+    min-width: 250px;
+    margin: 0;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.platform-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.stat-card h2 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.stat-content {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.recent-posts {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.post-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.user-profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.user-name {
+    font-weight: bold;
+    color: #333;
+    font-size: 0.9em;
+}
+
+.post-image {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    object-fit: cover;
+    height: 200px;
+}
+
+.post-card .post-meta {
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+    font-size: 0.8em;
+    margin-top: auto;
+}
+
+.facebook {
+    background-color: #3b5998;
+    color: white;
+}
+
+.twitter {
+    background-color: #1da1f2;
+    color: white;
+}
+
+.instagram {
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    color: white;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .dashboard {
+        padding: 10px;
+    }
+
+    .social-stats {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .stat-card {
+        margin-bottom: 15px;
+        min-width: 100%;
+    }
+
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .platform-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .post-image {
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    .dashboard {
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .stat-card h2 {
+        font-size: 1em;
+    }
+
+    .post-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .user-profile {
+        margin-bottom: 5px;
+        margin-right: 0;
+    }
+
+    .post-image {
+        height: 120px;
+    }
+}
+
+/* Accessibility and Print Styles */
+@media print {
+    body {
+        background-color: white;
+    }
+
+    .dashboard {
+        box-shadow: none;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .stat-card, .post-card {
+        border: 2px solid black;
+    }
+
+    .platform-logo, .user-profile {
+        border: 3px solid black;
+    }
+}

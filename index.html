@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Social Media Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <h1>Social Media Dashboard</h1>
+        </header>
+
+        <section class="social-stats">
+            <div class="stat-card facebook">
+                <img src="images/facebook-profile.png" alt="Facebook Profile" class="platform-logo">
+                <h2>Facebook</h2>
+                <div class="stat-content">
+                    <p class="followers">Followers: <span id="facebook-followers">0</span></p>
+                    <p class="likes">Likes: <span id="facebook-likes">0</span></p>
+                </div>
+            </div>
+
+            <div class="stat-card twitter">
+                <img src="images/twitter-profile.png" alt="Twitter Profile" class="platform-logo">
+                <h2>Twitter</h2>
+                <div class="stat-content">
+                    <p class="followers">Followers: <span id="twitter-followers">0</span></p>
+                    <p class="retweets">Retweets: <span id="twitter-retweets">0</span></p>
+                </div>
+            </div>
+
+            <div class="stat-card instagram">
+                <img src="images/instagram-profile.png" alt="Instagram Profile" class="platform-logo">
+                <h2>Instagram</h2>
+                <div class="stat-content">
+                    <p class="followers">Followers: <span id="instagram-followers">0</span></p>
+                    <p class="likes">Likes: <span id="instagram-likes">0</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="recent-posts">
+            <h2>Recent Posts</h2>
+            <div id="posts-container" class="posts-grid">
+                <!-- Posts will be dynamically added here -->
+            </div>
+        </section>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
